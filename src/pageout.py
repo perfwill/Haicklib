@@ -12,7 +12,10 @@ while 1:
         mt = os.path.getmtime(path);
         if mt > lastmt:
             f = open(path, 'r')
+            cont = f.read();
             lastmt=mt;
-            sys.stdout.write(f.read());
+            sys.stdout.write(cont);
+            sys.stdout.flush();
             f.close();
-    except OSError as e: pass;
+    except OSError as e:
+        print e;

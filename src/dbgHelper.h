@@ -2,6 +2,6 @@
 #define DBGHELPER_H
 
 BEGIN_C_DECLS
-	void hckPrint(...);
+	void hckPrint(char * format, ...);
 END_C_DECLS
 #endif
